@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    
+    <title>Document</title>
+</head>
+<body>
+    <header class="text-gray-600 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-row items-center justify-between">
+          <a class="flex title-font font-medium items-center text-gray-900 mb-0">
+            <span class="ml-3 text-2xl font-[Poppins] font-bold"><span class="text-blue-600">Personal</span> Blog</span>
+          </a>
+          <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center text-gray-700 hidden lg:block">
+            <a class="mr-5 hover:text-stone-900 transition-all duration-75 ease-in-out cursor-pointer capitalize hover:drop-shadow-lg">Home</a>
+            <a class="mr-5 hover:text-stone-900 transition-all duration-75 ease-in-out cursor-pointer capitalize">Topics & Categories</a>
+            <a class="mr-5 hover:text-stone-900 transition-all duration-75 ease-in-out cursor-pointer capitalize">Portfolio</a>
+            <a class="mr-5 hover:text-stone-900 transition-all duration-75 ease-in-out cursor-pointer capitalize">Links</a>
+            <a class="mr-5 hover:text-stone-900 transition-all duration-75 ease-in-out cursor-pointer capitalize">Contact</a>
+          </nav>
+          <div class=" items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-0 focus-within:ring-2 ring-blue-500 hidden lg:inline-flex">
+              <input type="text" class="w-36 border-0 rounded bg-transparent outline-none" placeholder="Search">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+          </div>
+          <div class="lg:hidden">
+            <svg  id="sm-nav-open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 md:w-8 md:h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+          </div>
+          <div id="sm-nav" class="fixed top-0 h-screen w-64 -right-64 md:-right-72 md:w-72 bg-gray-100 text-gray-600 flex flex-col space-y-8 lg:hidden overflow-x-hidden overflow-y-auto transition-all duration-105 ease-in-out">
+              <div class="w-full p-4 text-gray-50 bg-blue-500  flex items-center space-x-2 ">
+                <svg id="sm-nav-close" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd" />
+                  </svg>
+                  <h3 class=" text-xl">Menu</h3>
+              </div>
+              <div class="rounded-3xl bg-gray-100 mx-4 px-2 h-9 flex items-center justify-between border-2 border-blue-600 focus-within:border-blue-800">
+                  <input type="text" placeholder="Search" class="h-full outline-0 bg-transparent">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-full text-blue-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg>
+              </div>
+              <nav class="flex flex-col w-full text-gray-700 justify-center items-center font-bold">
+                  <a href="" class="uppercase text-lg border-b border-gray-300 w-full py-2 px-3 flex justify-between items-center"><span>Home</span></a>
+                  <div class="dropdown w-full">
+                    <div class="dropdown-toggle uppercase text-lg border-b border-gray-300 w-full py-2 px-3 flex justify-between items-center space-x-1">
+                        <span class="inline">Topics & Categories</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <div class="dropdown-list flex flex-col text-gray-700 bg-gray-200 hidden transition-all duration-150 ease-in-out">
+                        <a class="w-full text-center py-3 border-b" href="#">Python</a>
+                        <a class="w-full text-center py-3 border-b" href="#">Django</a>
+                        <a class="w-full text-center py-3 border-b" href="#">Shopify</a>
+                        <a class="w-full text-center py-3 border-b" href="#">Htmx</a>
+                        <a class="w-full text-center py-3 border-b" href="#">Javascript</a>
+                        <a class="w-full text-center py-3 border-b" href="#">React</a>
+                        <a class="w-full text-center py-3 border-b" href="#">Business</a>
+                    </div>
+                    </div>
+                  <a href="" class="uppercase text-lg border-b border-gray-300 w-full py-2 px-3 flex justify-between items-center"><span>Portfolio</span></a>
+                  <a href="" class="uppercase text-lg border-b border-gray-300 w-full py-2 px-3 flex justify-between items-center"><span>Links</span></a>
+                  <a href="" class="uppercase text-lg border-b border-gray-300 w-full py-2 px-3 flex justify-between items-center"><span>Contact</span></a>
+              </nav>
+          </div>
+        </div>
+    </header>
+    <header class="text-stone-900 font-bold body-font bg-gray-200 hidden md:block">
+        <div class="container mx-auto flex flex-wrap px-5 py-2 flex-col md:flex-row ">
+          <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
+            <a class="mr-5 hover:text-blue-900 transition-colors duration-75 ease-in-out cursor-pointer">Python</a>
+            <a class="mr-5 hover:text-blue-900 transition-colors duration-75 ease-in-out cursor-pointer">Django</a>
+            <a class="mr-5 hover:text-blue-900 transition-colors duration-75 ease-in-out cursor-pointer">Shopify</a>
+            <a class="mr-5 hover:text-blue-900 transition-colors duration-75 ease-in-out cursor-pointer">Htmx</a>
+            <a class="mr-5 hover:text-blue-900 transition-colors duration-75 ease-in-out cursor-pointer">Javascript</a>
+            <a class="mr-5 hover:text-blue-900 transition-colors duration-75 ease-in-out cursor-pointer">React</a>
+            <a class="mr-5 hover:text-blue-900 transition-colors duration-75 ease-in-out cursor-pointer">Business</a>
+          </nav>
+        </div>
+    </header>
+    <section class=" text-gray-800">
+        <div class="container max-w-screen-xl p-6 mx-auto space-y-6 sm:space-y-12">
+            <div rel="noopener noreferrer" href="#" class="block gap-3 mx-auto sm:max-w-full group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12 bg-blue-50">
+                <a href="https://github.com/" class="w-full h-64 rounded sm:h-96 lg:col-span-7"><img src="https://source.unsplash.com/random/480x360" alt="" class="object-cover w-full h-full  bg-blue-500"></a>
+                <div class="p-6 space-y-2 lg:col-span-5">
+                    <div class="lg:my-4 space-x-1" id="tags">
+                        <a href="http://www.google.com" class="text-xs text-gray-100 bg-blue-600 rounded-md px-2 py-0.5 font-bold uppercase">Cool</a>
+                        <a href="http://www.google.com" class="text-xs text-gray-100 bg-blue-600 rounded-md px-2 py-0.5 font-bold uppercase">Java-script</a>
+                        <a href="http://www.google.com" class="text-xs text-gray-100 bg-blue-600 rounded-md px-2 py-0.5 font-bold uppercase">Python</a>
+                        <a href="http://www.google.com" class="text-xs text-gray-100 bg-blue-600 rounded-md px-2 py-0.5 font-bold uppercase">Web</a>
+                        <a href="http://www.google.com" class="text-xs text-gray-100 bg-blue-600 rounded-md px-2 py-0.5 font-bold uppercase">Business</a>
+                    </div>
+                    <a href="https://github.com/">
+                        <h3 class="text-2xl font-semibold sm:text-4xl group-hover:text-blue-900 group-focus:text-blue-900 group-hover:underline group-focus:underline lg:mb-2">Noster tincidunt reprimique ad pro</h3>
+                        <span class="text-xs text-blue-700 uppercase font-semibold">February 19, 2021</span>
+                        <p>Ei delenit sensibus liberavisse pri. Quod suscipit no nam. Est in graece fuisset, eos affert putent doctus id.</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+        <h5 class="mt-4l font-[Poppins] border-l-4 border-blue-500 w-fit pl-2 mb-8 text-3xl font-bold leading-5">Latest Articles</h5>
+        <div class="grid gap-5 lg:grid-cols-3 md:grid-cols-2 sm:mx-auto lg:max-w-full">
+          <div class="overflow-hidden transition-shadow duration-300 bg-white rounded">
+            <a href="/" aria-label="Article"><img src="https://source.unsplash.com/random/480x360?sig=123" class="object-cover w-full h-64 rounded" alt="" /></a>
+            <div class="py-5">
+              <p class="mb-2 text-xs font-semibold text-blue-600 uppercase">
+                13 Jul 2020
+              </p>
+              <a href="/" aria-label="Article" class="inline-block mb-3 text-black transition-colors duration-200 hover:text-deep-purple-accent-700"><p class="text-2xl font-bold leading-5">Diving to the deep</p></a>
+              <p class="mb-4 text-gray-700">
+                Sed ut perspiciatis unde omnis iste natus error sit sed quia consequuntur magni voluptatem doloremque.
+              </p>
+              <div class="flex space-x-1">
+                    <span class="text-xs text-blue-600 bg-gray-100 rounded-md px-2 py-0.5 mr-0.5 font-bold uppercase">Cool</span>
+                    <span class="text-xs text-blue-600 bg-gray-100 rounded-md px-2 py-0.5 mr-0.5 font-bold uppercase">Java-script</span>
+                    <span class="text-xs text-blue-600 bg-gray-100 rounded-md px-2 py-0.5 mr-0.5 font-bold uppercase">Python</span>
+                    <span class="text-xs text-blue-600 bg-gray-100 rounded-md px-2 py-0.5 mr-0.5 font-bold uppercase">Web</span>
+                    <span class="text-xs text-blue-600 bg-gray-100 rounded-md px-2 py-0.5 mr-0.5 font-bold uppercase">Business</span>
+              </div>
+            </div>
+          </div>
+          <div class="overflow-hidden transition-shadow duration-300 bg-white rounded">
+            <a href="/" aria-label="Article"><img src="https://source.unsplash.com/random/480x360?sig=1234" class="object-cover w-full h-64 rounded" alt="" /></a>
+            <div class="py-5">
+              <p class="mb-2 text-xs font-semibold text-blue-600 uppercase">
+                13 Jul 2020
+              </p>
+              <a href="/" aria-label="Article" class="inline-block mb-3 text-black transition-colors duration-200 hover:text-deep-purple-accent-700"><p class="text-2xl font-bold leading-5">Diving to the deep</p></a>
+              <p class="mb-4 text-gray-700">
+                Sed ut perspiciatis unde omnis iste natus error sit sed quia consequuntur magni voluptatem doloremque.
+              </p>
+              <div class="flex space-x-1">
+                    <span class="text-xs text-blue-600 bg-gray-100 rounded-md px-2 py-0.5 mr-0.5 font-bold uppercase">Cool</span>
+                    <span class="text-xs text-blue-600 bg-gray-100 rounded-md px-2 py-0.5 mr-0.5 font-bold uppercase">Java-script</span>
+                    <span class="text-xs text-blue-600 bg-gray-100 rounded-md px-2 py-0.5 mr-0.5 font-bold uppercase">Python</span>
+                    <span class="text-xs text-blue-600 bg-gray-100 rounded-md px-2 py-0.5 mr-0.5 font-bold uppercase">Web</span>
+                    <span class="text-xs text-blue-600 bg-gray-100 rounded-md px-2 py-0.5 mr-0.5 font-bold uppercase">Business</span>
+              </div>
+            </div>
+          </div>
+          <div class="overflow-hidden transition-shadow duration-300 bg-white rounded">
+            <a href="/" aria-label="Article"><img src="https://source.unsplash.com/random/480x360?sig=12345" class="object-cover w-full h-64 rounded" alt="" /></a>
+            <div class="py-5">
+              <p class="mb-2 text-xs font-semibold text-blue-600 uppercase">
+                13 Jul 2020
+              </p>
+              <a href="/" aria-label="Article" class="inline-block mb-3 text-black transition-colors duration-200 hover:text-deep-purple-accent-700"><p class="text-2xl font-bold leading-5">Diving to the deep</p></a>
+              <p class="mb-4 text-gray-700">
+                Sed ut perspiciatis unde omnis iste natus error sit sed quia consequuntur magni voluptatem doloremque.
+              </p>
+              <div class="flex space-x-1">
+                    <span class="text-xs text-blue-600 bg-gray-100 rounded-md px-2 py-0.5 mr-0.5 font-bold uppercase">Cool</span>
+                    <span class="text-xs text-blue-600 bg-gray-100 rounded-md px-2 py-0.5 mr-0.5 font-bold uppercase">Java-script</span>
+                    <span class="text-xs text-blue-600 bg-gray-100 rounded-md px-2 py-0.5 mr-0.5 font-bold uppercase">Python</span>
+                    <span class="text-xs text-blue-600 bg-gray-100 rounded-md px-2 py-0.5 mr-0.5 font-bold uppercase">Web</span>
+                    <span class="text-xs text-blue-600 bg-gray-100 rounded-md px-2 py-0.5 mr-0.5 font-bold uppercase">Business</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+</body>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+    document.getElementById("sm-nav-open").addEventListener("click", ()=> {
+        document.getElementById("sm-nav").classList.add("right-0");
+        document.getElementById("sm-nav").classList.add("md:right-0");
+    })
+    document.getElementById("sm-nav-close").addEventListener("click", ()=> {
+        document.getElementById("sm-nav").classList.remove("right-0");
+        document.getElementById("sm-nav").classList.remove("md:right-0");
+    })
+    document.querySelectorAll('.dropdown').forEach((dropdown)=> {
+        let toggle = dropdown.querySelector('.dropdown-toggle');
+        let list = dropdown.querySelector('.dropdown-list');
+        let icon = toggle.querySelector('svg');
+        toggle.addEventListener("click", ()=>{
+            list.classList.toggle("hidden")
+            icon.classList.toggle("rotate-180")
+        })
+    })
+</script>
+</html>
